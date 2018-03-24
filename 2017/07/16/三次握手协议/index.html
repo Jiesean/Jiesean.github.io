@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1806858-71d6f02cebddb4bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1806858-f31a9ff69479aac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1806858-0cb3e9f48668cf95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-08T14:10:05.201Z">
+<meta property="og:updated_time" content="2018-03-24T14:29:17.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三次握手协议">
 <meta name="twitter:description" content="我们常见的三次握手协议大概是TCP通过三次握手建立连接的，但是在BLE的LL层连接管理的启动加密过程也是存在三次握手的过程，以前大概学习过TCP的三次连接，但是理解似乎只在于其实现，而没有思考其中的原理，今天看到一篇文章用军事上的电报的例子很好的说明了其原理和利弊，拾人牙慧。 三次握手保证了什么？我们来看两个人通过传唤机进行通信的过程：  第一次握手：“ 二号二号，我是一号，收到请回答。”">
@@ -199,6 +199,9 @@
 <p>对于TCP/IP协议建立连接的过程没有什么不同，就是经过完成三次确认确保双方的通信链路是通的。</p>
 <p>简单过程如下：</p>
 <p>  （1）第一次握手：Client将标志位SYN置为1，随机产生一个值seq=J，并将该数据包发送给Server，Client进入SYN_SENT状态，等待Server确认。<br>  （2）第二次握手：Server收到数据包后由标志位SYN=1知道Client请求建立连接，Server将标志位SYN和ACK都置为1，ack=J+1，随机产生一个值seq=K，并将该数据包发送给Client以确认连接请求，Server进入SYN_RCVD状态。<br>  （3）第三次握手：Client收到确认后，检查ack是否为J+1，ACK是否为1，如果正确则将标志位ACK置为1，ack=K+1，并将该数据包发送给Server，Server检查ack是否为K+1，ACK是否为1，如果正确则连接建立成功，Client和Server进入ESTABLISHED状态，完成三次握手，随后Client与Server之间可以开始传输数据了。</p>
+<h3 id="那为什么需要四次挥手呢？请看如下过程："><a href="#那为什么需要四次挥手呢？请看如下过程：" class="headerlink" title="那为什么需要四次挥手呢？请看如下过程："></a>那为什么需要四次挥手呢？请看如下过程：</h3><p>第一次挥手：A告知B，A没有数据需要发送了，请求断开。<br>第二次挥手：B确认A的请求。<br>第三次挥手：B告知A，B没有数据需要发送了，请求断开。<br>第四次挥手：A确认B的请求。<br>B收到确认信号，断开连接，而A在一段时间内没收到B的信号，表明B已经断开了，于是A也断开了连接。<br>至此，完成整个挥手过程。</p>
+<p>那至于为什么第二次第三次挥手不能合并在一起呢？<br>因为A虽然没有数据要发送了，B在第二次挥手确认了A的请求，但是B可能还有数据要发送，因此， B断开的请求不能和确认发送。</p>
+<p>因此四次完成了挥手。</p>
 <blockquote>
 <p>参考<br><a href="http://blog.sina.com.cn/s/blog_624f70600100he7u.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_624f70600100he7u.html</a></p>
 </blockquote>
@@ -449,6 +452,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -457,15 +468,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
