@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://jiesean.github.io">
-  <title>Tag: Android | Hexo</title>
+  <title>HTTPS比HTTP安全在哪里 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一切问题拆解到最后都是简单的原子问题">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://jiesean.github.io/tags/Android/page/2/index.html">
+  <meta name="description" content="如今我们在上网的时候能够看到越来越多的网站采用https的连接，多数浏览器都将https的链接标记为安全的连接，那么https究竟是何方神圣？又比http安全在哪里呢？ 首先，https是我们常见的http加上安全加密协议s组合的，而至于s为何, 很多人说是TLS（安全传输层协议），也有人说是 SSL（安全套接层），大概就是Security吧。https即 “在 TLS/SSL 上实现的 HTTP">
+<meta name="keywords" content="网络,HTTP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTPS比HTTP安全在哪里">
+<meta property="og:url" content="https://jiesean.github.io/2018/01/27/HTTPS比HTTP安全在哪里/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一切问题拆解到最后都是简单的原子问题">
+<meta property="og:description" content="如今我们在上网的时候能够看到越来越多的网站采用https的连接，多数浏览器都将https的链接标记为安全的连接，那么https究竟是何方神圣？又比http安全在哪里呢？ 首先，https是我们常见的http加上安全加密协议s组合的，而至于s为何, 很多人说是TLS（安全传输层协议），也有人说是 SSL（安全套接层），大概就是Security吧。https即 “在 TLS/SSL 上实现的 HTTP">
+<meta property="og:updated_time" content="2018-03-27T13:43:05.046Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="一切问题拆解到最后都是简单的原子问题">
+<meta name="twitter:title" content="HTTPS比HTTP安全在哪里">
+<meta name="twitter:description" content="如今我们在上网的时候能够看到越来越多的网站采用https的连接，多数浏览器都将https的链接标记为安全的连接，那么https究竟是何方神圣？又比http安全在哪里呢？ 首先，https是我们常见的http加上安全加密协议s组合的，而至于s为何, 很多人说是TLS（安全传输层协议），也有人说是 SSL（安全套接层），大概就是Security吧。https即 “在 TLS/SSL 上实现的 HTTP">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,181 +156,188 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-HTTPS比HTTP安全在哪里" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTTPS比HTTP安全在哪里
+    </h1>
+  
+
+        
+        <a href="/2018/01/27/HTTPS比HTTP安全在哪里/" class="archive-article-date">
+  	<time datetime="2018-01-27T13:37:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如今我们在上网的时候能够看到越来越多的网站采用https的连接，多数浏览器都将https的链接标记为安全的连接，那么https究竟是何方神圣？又比http安全在哪里呢？</p>
+<p>首先，https是我们常见的http加上安全加密协议s组合的，而至于s为何, 很多人说是TLS（安全传输层协议），也有人说是 SSL（安全套接层），大概就是Security吧。https即 “在 TLS/SSL 上实现的 HTTP 协议”，即在 TLS/SSL上增加了安全处理。</p>
+<a id="more"></a>
+<p>现在我们来看 TLS/SSL上是如何来保证安全的：</p>
+<p><strong>1. 证书</strong> ： 经由第三方权威证书颁发机构（如 VeriSign）验证和担保网站的身份，防止他人冒充网站身份与不知情的用户建立加密连接。<br><strong>2.  密钥交换</strong>：通过非对称加密的方式在网站和用户之间协商生成一个共同的会话密钥（RSA协议）<br><strong>3. 会话加密</strong>：使用步骤2协商的会话秘钥来对对话内容进行对称加密 （AES-256协议）<br><strong>4.  消息校验</strong>：使用消息校验方法来保证加密的信息传输过程中的安全性（SHA1）</p>
+<p>以下用简单的生活化的场景来解释为什么https比http更加安全。</p>
+<p>假如你需要给一个朋友写信，告知他某个重要的信息，并期待得到他的回复，这就好比是一个http的过程。这个过程中需要经过快递员和邮局的传递信件才能到达对方手里，这个过程也好比信息在互联网各个节点上的传输。如同http,一封信的传递也需要目标地址和收件人等信息，以及最终要的信件内容，这些信息在信件的传递过程中可能被中间的某个人拿到，比如无良的快递员，他完全可以获取你的整个信件信息，并且完全可以假装你的好友和你通信，获取你更多的信息（忽略字体，情感，语气等因素），因而说，这种http的方式在互联网上的传播也是类似的，中间节点完全可以获取到你与服务器的通信内容，甚至是假装服务器与你进行通信，可想而知这存在多么严重的安全隐患。</p>
+<p>那么我们再来看看https到底做了什么来保证这个过程的安全性呢？</p>
+<p>首先是证书，证书是第三方权威机构颁发的用来证明网站合法性的，这就好比你通过字体，情感，语气等来证明给你回信的是你朋友，而不是其他什么人。一般来说，各个网站服务商需要申请CA（Certificate Authority）认证，经过他们认证的网站在建立安全连接的时候会带上CA的签名，然后你的系统或者是浏览器与其建立连接时会去验证该CA签名，如果该CA签名不在他们的安全CA证书列表中，就认为连接可能遭到了中间人的攻击。</p>
+<p>其次，即使保证了对方确实是你的朋友，但是你们通信的内容可能被中间人获取到，因此我们需要对传输的信息进行加密。加密的方式就是对称加密，就是我发送信件的时候使用密码对内容进行加密，然后对方收到后使用同一个密码进行解密，这个思想很简单，我们在影视作品中也常常能够看到，双方各保有一个密码本，传输的信息是第几页第几个字，中间人即使获取了该信息，如果他没有密码本，他是无法解密的。现实生活中，我们可以很轻易的将密码本安全的交到对方手中，再以此为基础进行加密通信，但是互联网上，这个过程可能也会被中间人获取，就好比你和朋友并不能见面，密码本也需要通过邮寄的方式交给对方，这个密码本将也有可能被不怀好意的人获取。</p>
+<p>那么我们应该想一个方法来保证该密码本的安全传输。这里https使用到的就是非对称加密的方式。这种加密算法会生成两个密钥（key1 和 key2）。凡是 key1 加密的数据，key1 自身不能解密，需要 key2 才能解密；凡事 key2 加密的数据，key2 自身不能解密，只有 key1 才能解密。</p>
+<p>有了这个算法我们的困扰就迎刃而解了，那么我们来看一下这个过程：</p>
+<ol>
+<li>我们先使用非对称加密算法生成key1和key2</li>
+<li>我们将key2通过网络传输到对方那里，key2极有可能被中间人获取到。</li>
+<li>对方生成一个公钥，即我们想要传输的密码本，使用key2经由非对称加密的方式对该密码本进行加密。并通过网络将该密码本传输给我们，这个经过key2加密的密码本即使被中间人获取到，他们使用手里已获得的key2也无法对其进行解密。</li>
+<li>我们拿到加密的密码本之后使用key1进行解密，就得到了一个安全的同对方手里一模一样的密码本了。</li>
+</ol>
+<p>此时我们已经能够保证双方均能保有安全的密码本，这样即可保证我们通信的内容无法被别人获取到，但是我们无法保证中间人将信息篡改啊，他虽然看不懂传输的内容，但是他可以将传输的内容改乱，导致我们双发也无法回去到正确的内容，当然这个我们只要收到信息后校验以下是否是完整未篡改的，如果发现被改动之后，我们可以进行重传来保证安全和完整性。</p>
+<p>经过以上的步骤，通信的内容已经可以很大程度上得到了保证，但是同时我们也应该知道信息安全只有相对没有绝对，什么样的手段都无法保证信息绝对安全的送达。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/30/Android笔记之Handler异步消息处理机制/" class="archive-article-date">
-  	<time datetime="2016-08-30T11:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/30/Android笔记之Handler异步消息处理机制/">Android笔记之Handler异步消息处理机制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/18/自定义圆形ImageView/" class="archive-article-date">
-  	<time datetime="2016-08-18T13:16:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/18/自定义圆形ImageView/">自定义圆形ImageView</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/09/repo下载谷歌源码出现问题/" class="archive-article-date">
-  	<time datetime="2016-08-09T01:10:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/09/repo下载谷歌源码出现问题/">repo下载谷歌源码出现问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tips</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jiesean.github.io/2018/01/27/HTTPS比HTTP安全在哪里/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/07/Android-自定义控件/" class="archive-article-date">
-  	<time datetime="2016-03-07T02:15:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/16/三次握手协议/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三次握手协议</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/07/Android-自定义控件/">Android 自定义控件</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="HTTPS比HTTP安全在哪里" data-title="HTTPS比HTTP安全在哪里" data-url="https://jiesean.github.io/2018/01/27/HTTPS比HTTP安全在哪里/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/Android/">&laquo; Prev</a><a class="page-number" href="/tags/Android/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
   
 
 
@@ -352,9 +361,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
