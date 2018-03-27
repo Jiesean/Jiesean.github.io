@@ -6,25 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://jiesean.github.io">
-  <title>BLE 信道和自适应跳频 | Hexo</title>
+  <title>100亿个数中寻找中位数 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="信道在物理层，因为调制参数放宽，所以BLE和经典蓝牙的信道并不相同，而是只有40个信道，因为功率谱更宽，为了避免相邻信道的干扰，采用2MHz的信道宽度。 在链路层，将40个信道分为广播信道和数据信道，37个是数据信道，3个广播信道。40个信道最低的中心频率为2402MHz，最高的为2480MHz。第一个信道的频率为2402，以后每一个信道加20MHz。 广播信道分散在距离较远的频段上，过度的集中会">
-<meta name="keywords" content="BLE,BT">
+  <meta name="description" content="在一个大文件中有100亿个32位整数，乱序排列，要求找出中位数；内存限制为512M；请写出算法设计思路； 基本分析： 中位数的定义：一个给定排序好的序列，奇数个的话，我们就取中间的一个；偶数个的话，我们一般取中间两个数的平均值；因此对于本题，我们需得到中间的第50亿和第50亿+1这两个数；  首先512M的内存，如果都来装这个32位整数的话，可以存储2^(9+10+10)/4=2^27（13421">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BLE 信道和自适应跳频">
-<meta property="og:url" content="https://jiesean.github.io/2017/07/08/BLE-信道和自适应跳频/index.html">
+<meta property="og:title" content="100亿个数中寻找中位数">
+<meta property="og:url" content="https://jiesean.github.io/2015/10/27/100亿个数中寻找中位数/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="信道在物理层，因为调制参数放宽，所以BLE和经典蓝牙的信道并不相同，而是只有40个信道，因为功率谱更宽，为了避免相邻信道的干扰，采用2MHz的信道宽度。 在链路层，将40个信道分为广播信道和数据信道，37个是数据信道，3个广播信道。40个信道最低的中心频率为2402MHz，最高的为2480MHz。第一个信道的频率为2402，以后每一个信道加20MHz。 广播信道分散在距离较远的频段上，过度的集中会">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1806858-bf77889e42127448.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1806858-34b6de6b8fb744ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1806858-f29f1da7bcacf452.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1806858-0865b224231ac615.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1806858-5e6ba112ec0914fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-08T14:11:50.261Z">
+<meta property="og:description" content="在一个大文件中有100亿个32位整数，乱序排列，要求找出中位数；内存限制为512M；请写出算法设计思路； 基本分析： 中位数的定义：一个给定排序好的序列，奇数个的话，我们就取中间的一个；偶数个的话，我们一般取中间两个数的平均值；因此对于本题，我们需得到中间的第50亿和第50亿+1这两个数；  首先512M的内存，如果都来装这个32位整数的话，可以存储2^(9+10+10)/4=2^27（13421">
+<meta property="og:updated_time" content="2018-03-27T13:56:15.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BLE 信道和自适应跳频">
-<meta name="twitter:description" content="信道在物理层，因为调制参数放宽，所以BLE和经典蓝牙的信道并不相同，而是只有40个信道，因为功率谱更宽，为了避免相邻信道的干扰，采用2MHz的信道宽度。 在链路层，将40个信道分为广播信道和数据信道，37个是数据信道，3个广播信道。40个信道最低的中心频率为2402MHz，最高的为2480MHz。第一个信道的频率为2402，以后每一个信道加20MHz。 广播信道分散在距离较远的频段上，过度的集中会">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1806858-bf77889e42127448.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="100亿个数中寻找中位数">
+<meta name="twitter:description" content="在一个大文件中有100亿个32位整数，乱序排列，要求找出中位数；内存限制为512M；请写出算法设计思路； 基本分析： 中位数的定义：一个给定排序好的序列，奇数个的话，我们就取中间的一个；偶数个的话，我们一般取中间两个数的平均值；因此对于本题，我们需得到中间的第50亿和第50亿+1这两个数；  首先512M的内存，如果都来装这个32位整数的话，可以存储2^(9+10+10)/4=2^27（13421">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -162,45 +156,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-BLE-信道和自适应跳频" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-100亿个数中寻找中位数" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      BLE 信道和自适应跳频
+      100亿个数中寻找中位数
     </h1>
   
 
         
-        <a href="/2017/07/08/BLE-信道和自适应跳频/" class="archive-article-date">
-  	<time datetime="2017-07-08T04:10:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-08</time>
+        <a href="/2015/10/27/100亿个数中寻找中位数/" class="archive-article-date">
+  	<time datetime="2015-10-27T11:53:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="信道"><a href="#信道" class="headerlink" title="信道"></a>信道</h3><p>在物理层，因为调制参数放宽，所以BLE和经典蓝牙的信道并不相同，而是只有40个信道，因为功率谱更宽，为了避免相邻信道的干扰，采用2MHz的信道宽度。</p>
-<p>在链路层，将40个信道分为广播信道和数据信道，37个是数据信道，3个广播信道。40个信道最低的中心频率为2402MHz，最高的为2480MHz。第一个信道的频率为2402，以后每一个信道加20MHz。</p>
-<p>广播信道分散在距离较远的频段上，过度的集中会导致如果该频段受干扰严重可能广播就无法进行的情况，分散的目的是为了增加容错率。</p>
+        <p>在一个大文件中有100亿个32位整数，乱序排列，要求找出中位数；内存限制为512M；请写出算法设计思路；</p>
+<h3 id="基本分析："><a href="#基本分析：" class="headerlink" title="基本分析："></a>基本分析：</h3><ol>
+<li><p>中位数的定义：一个给定排序好的序列，奇数个的话，我们就取中间的一个；偶数个的话，我们一般取中间两个数的平均值；因此对于本题，我们需得到中间的第50亿和第50亿+1这两个数；</p>
+</li>
+<li><p>首先512M的内存，如果都来装这个32位整数的话，可以存储2^(9+10+10)/4=2^27（134217728）个数（1亿左右的数）；常规的内部排序肯定是不行了，因为内存不够；而且是乱序排列，所以二分查找不行；所以本题的时间复杂度最少为O(n);</p>
+</li>
+<li><p>由于内存是512M，可存储1亿个数；那么我们先把100亿个数分成100组；使用512M高内存可装载1亿个数，装载100次；</p>
+</li>
+</ol>
 <a id="more"></a>
-<p>而广播频道的选择主要是考虑到WIFI接入点的干扰。这些接入点通常选择802.11的信道1/6/11三个信道，分别占据 <strong> 2402MHz~2422MHz, 2427MHz~2447MHz, 2452MHz~2472MHz </strong>;</p>
-<p>而BLE的广播信道则分别为 <strong> 2402MHz,2426MHz,2480MHz </strong>,也就意味着第一个广播信道低于wifi信道1，第二个广播信道位于WIFI信道1和6之间，第三个广播信道高于11号信道，正好避免了三个Wifi常用接入点信道的覆盖，避免了他们的干扰。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1806858-bf77889e42127448.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="LL信道"></p>
-<p>如上图所示，广播信道的编号是37~39，数据信道的编号是0~36，这样标号的目的是降低跳频算法的实现难度。</p>
-<h3 id="跳频"><a href="#跳频" class="headerlink" title="跳频"></a>跳频</h3><p>连接状态中链路采取跳频的技术避免环境中的干扰，而BLE的跳频算算法其实很简单，就是一个在37个数据信道之间的等概率转换。</p>
-<p>最常见的一种是模37的方法：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1806858-34b6de6b8fb744ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>X取一个5-16之间的值。采取这样数值的原因，应该是使得跳频图图谱更加均匀，不至于两个频率隔得太近，以至于环境干扰无法通过环境干扰消除，也不至于频率隔得太远，造成功率转换带来的额外功耗。（这是我的猜测，并未得到任何资料的证实）。</p>
-<p>当然我们也可以采取加减法实现该算法，就是加上X,然后判断结果大于36，就减去37：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1806858-f29f1da7bcacf452.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h3 id="自适应跳频"><a href="#自适应跳频" class="headerlink" title="自适应跳频"></a>自适应跳频</h3><p>自适应跳频技术原理也很简单，每次数据传输之后我们进行对信道质量进行评估，如果我们认为当前信道质量较差，我们将它从可用信道列表中删除，这是一个通用的思路。</p>
-<p>具体到BLE中，自适应跳频技术是将一个坏掉（干扰严重）的信道映射到一个好信道，当跳频算法跳到该坏信道时，实际采用的是他映射的那个好的信道进行数据的传输。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1806858-0865b224231ac615.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>如上图所示，主设备通过LL_CHANNEL_MAP_REQ 数据链路层管理包来进行新的信道图的同步与更新。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1806858-5e6ba112ec0914fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="OTA packet"><br>如上图，我们看到实际的空口包中信道图的信息。</p>
+<h3 id="算法思路："><a href="#算法思路：" class="headerlink" title="算法思路："></a>算法思路：</h3><p>（1）我们要划分映射区域，一个有符号的32位整数的取值范围是[-2^31, 2^31-1]，总共有4294967296个取值，因此我们将它划分成100000组，即43000个数映射到一个组，将a1的区间[-2^31，-2^31+43000)，a2的区间[-2^31+43000，-2^31+86000)……一直到a100000的区间；（这是组数与项数的一个平衡问题）；</p>
+<p>（2.1）我们首先装载第一个1亿个数，遍历这些数，比较大小，看他落入a1至a100000的哪个区间，落入的对应区间统计计数增1；这次是对这里面的数区间的组映射；</p>
+<p>（2.2）重复步骤（2.1），装载100次，这样我们就得到了a1至a100000的区间统计计数的取值；</p>
+<p>（2.3）内存分析：1亿个数用来装载，100000个区间统计计数耗费400000个字节，足够使用；剩余内存（128M-1亿-100000）<em>4B<br>（3.1）使用sum依次累加a1至a100000的区间统计计数，直到累加某区间ai后sum大于50亿了；那么第50亿个数就在该区间中，用sum减去该区间ai的统计数的到first；即前面的区间统计总数位置为第first个（其中first &lt; 50亿）;<br>（3.2）那么我就在ai区间找到第50亿-first个数，或第50亿-first+1个数（第50亿-first+1个数这个数可能在ai后面的区间，但是概率很小，但是找到的原理类似）；<br>（3.3）内存分析：每一个区间分割比较要花费100000个区间比较数，耗费400000个字节，足够使用；剩余内存（128M-1亿-100000-100000-2）</em>4B;<br>（4.1）再次遍历这100亿个数，还是每组1亿个数，一共100组；对于若在ai区间的43000个数的每一个都开一个统计计数器 ，跟上面类似，这次是对这里面的数单个映射；<br>（4.2）同样使用sum依次累加这1至43000的的统计计数，直到累加某区间后sum大于50亿-first；那么我们可以得到第（50亿-first）个数就在对应的位置；而且第（50亿-first+1）个数位置也有可能在，或在下一个统计计数大于0的位置；当然也有可能不在ai区间；（但原理类似）；<br>（4.3）得到了第（50亿-first）个数值；而且第（50亿-first+1）个数值，可算出中位数了；<br>（4.4）内存分析：上述的100000个比较数，此时我们只需要两个比较数；100000个区间统计计数全部释放掉，但增加了43000位置统计计数；剩余内存（128M-1亿-43000-2-2）*4B；还是足够使用的；<br>（5）总共遍历两遍100亿数据；</p>
 
       
 
@@ -214,11 +203,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BLE</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">BT</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -274,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jiesean.github.io/2017/07/08/BLE-信道和自适应跳频/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jiesean.github.io/2015/10/27/100亿个数中寻找中位数/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,18 +273,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/12/BLE-链路控制二/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/03/07/Android-自定义控件/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          BLE 链路控制二
+          Android 自定义控件
         
       </div>
     </a>
   
   
-    <a href="/2017/07/06/BLE-链路层报文详解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">BLE 链路层报文详解</div>
+    <a href="/2015/09/23/HTTP-请求的基本过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTTP 请求的基本过程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -327,7 +312,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="BLE-信道和自适应跳频" data-title="BLE 信道和自适应跳频" data-url="https://jiesean.github.io/2017/07/08/BLE-信道和自适应跳频/"></div>
+	<div class="ds-thread" data-thread-key="100亿个数中寻找中位数" data-title="100亿个数中寻找中位数" data-url="https://jiesean.github.io/2015/10/27/100亿个数中寻找中位数/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

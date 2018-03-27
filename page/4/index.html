@@ -710,6 +710,90 @@
 
 
   
+    <article id="post-100亿个数中寻找中位数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/27/100亿个数中寻找中位数/">100亿个数中寻找中位数</a>
+    </h1>
+  
+
+        
+        <a href="/2015/10/27/100亿个数中寻找中位数/" class="archive-article-date">
+  	<time datetime="2015-10-27T11:53:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在一个大文件中有100亿个32位整数，乱序排列，要求找出中位数；内存限制为512M；请写出算法设计思路；</p>
+<h3 id="基本分析："><a href="#基本分析：" class="headerlink" title="基本分析："></a>基本分析：</h3><ol>
+<li><p>中位数的定义：一个给定排序好的序列，奇数个的话，我们就取中间的一个；偶数个的话，我们一般取中间两个数的平均值；因此对于本题，我们需得到中间的第50亿和第50亿+1这两个数；</p>
+</li>
+<li><p>首先512M的内存，如果都来装这个32位整数的话，可以存储2^(9+10+10)/4=2^27（134217728）个数（1亿左右的数）；常规的内部排序肯定是不行了，因为内存不够；而且是乱序排列，所以二分查找不行；所以本题的时间复杂度最少为O(n);</p>
+</li>
+<li><p>由于内存是512M，可存储1亿个数；那么我们先把100亿个数分成100组；使用512M高内存可装载1亿个数，装载100次；</p>
+</li>
+</ol>
+        
+          <a class="article-more-a" href="/2015/10/27/100亿个数中寻找中位数/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/10/27/100亿个数中寻找中位数/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-HTTP-请求的基本过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -878,6 +962,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
