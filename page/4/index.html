@@ -156,86 +156,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Android笔记之Handler异步消息处理机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/30/Android笔记之Handler异步消息处理机制/">Android笔记之Handler异步消息处理机制</a>
-    </h1>
-  
-
-        
-        <a href="/2016/08/30/Android笔记之Handler异步消息处理机制/" class="archive-article-date">
-  	<time datetime="2016-08-30T11:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>主要参考文献：<br>深入理解Android，卷１<br>Android 5.0 源码<br> <a href="http://blog.csdn.net/sodino/article/details/41946607" target="_blank" rel="noopener">http://blog.csdn.net/sodino/article/details/41946607</a></p>
-</blockquote>
-<p>学识尚浅，错误之处请指正。</p>
-<p>#####为什么需要JNI?<br>JNI(Java Native Interface的简称)，中文翻译为java本地调用接口，名字已经很形象的说明了这个技术的作用，就是支持java这种高级编程语言对本地函数的调用，主要包括C/C++等语言编写的函数。</p>
-        
-          <a class="article-more-a" href="/2016/08/30/Android笔记之Handler异步消息处理机制/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/08/30/Android笔记之Handler异步消息处理机制/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-自定义圆形ImageView" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -955,9 +875,85 @@
 
 
   
+    <article id="post-Java实现线性存储的二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/17/Java实现线性存储的二叉树/">Java实现线性存储的二叉树</a>
+    </h1>
+  
+
+        
+        <a href="/2015/09/17/Java实现线性存储的二叉树/" class="archive-article-date">
+  	<time datetime="2015-09-17T12:39:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/** </span><br><span class="line"> * 线性存储的二叉树 </span><br><span class="line"> *  </span><br><span class="line"> * @author Administrator </span><br><span class="line"> * </span><br><span class="line"> */  </span><br><span class="line">public class LinearBinaryTree &lt;T&gt;&#123;  </span><br><span class="line">    //用来存储数据的数组  </span><br><span class="line">    private Object[] datas;  </span><br><span class="line">    //定义默认的树的深度  </span><br><span class="line">    private int DEFAULT_DEEP=8;  </span><br><span class="line">    //保存树的深度  </span><br><span class="line">    private int deep;  </span><br><span class="line">    private int arraySize;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2015/09/17/Java实现线性存储的二叉树/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/09/17/Java实现线性存储的二叉树/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
     </nav>
   
 

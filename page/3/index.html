@@ -156,91 +156,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-BLE简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/18/BLE简介/">BLE简介</a>
-    </h1>
-  
-
-        
-        <a href="/2016/12/18/BLE简介/" class="archive-article-date">
-  	<time datetime="2016-12-18T14:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p><a href="https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction" target="_blank" rel="noopener">Introduction to Bluetooth Low Energy</a></p>
-</blockquote>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Bluetooth Low Energy (BLE)，也经常被称为<strong>Bluetooth Smart</strong>，它是传统蓝牙的子集，在Bluetooth 4.0 core specification中被引入。虽然BLE和传统蓝牙有很多重叠的地方，但是它是有自己独特的历史血统的，BLE被Bluetooth SIG即蓝牙标准纳入之前，一直是诺基亚发展的一个叫做Wibree的室内项目。</p>
-<p>对工程师们来说虽然有很多种的无线协议可供选择，但是BLE是实现和现代移动平台通信的最简单的方式，尤其是对于苹果设备而言，BLE可以说是唯一的可以避免为了成功的提交苹果商店的硬件设计选择。</p>
-<p>以下的简介将使你有一个快速对BLE的总体的了解，尤其是数据如何组织，以及设备如何通过广播来告之其存在，让你可以连接他们并进行数据的传输。</p>
-        
-          <a class="article-more-a" href="/2016/12/18/BLE简介/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BLE</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">BT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/BLE简介/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Android笔记之蓝牙enble过程源码追踪" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -983,9 +898,89 @@
 
 
   
+    <article id="post-Android笔记之Handler异步消息处理机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/30/Android笔记之Handler异步消息处理机制/">Android笔记之Handler异步消息处理机制</a>
+    </h1>
+  
+
+        
+        <a href="/2016/08/30/Android笔记之Handler异步消息处理机制/" class="archive-article-date">
+  	<time datetime="2016-08-30T11:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>主要参考文献：<br>深入理解Android，卷１<br>Android 5.0 源码<br> <a href="http://blog.csdn.net/sodino/article/details/41946607" target="_blank" rel="noopener">http://blog.csdn.net/sodino/article/details/41946607</a></p>
+</blockquote>
+<p>学识尚浅，错误之处请指正。</p>
+<p>#####为什么需要JNI?<br>JNI(Java Native Interface的简称)，中文翻译为java本地调用接口，名字已经很形象的说明了这个技术的作用，就是支持java这种高级编程语言对本地函数的调用，主要包括C/C++等语言编写的函数。</p>
+        
+          <a class="article-more-a" href="/2016/08/30/Android笔记之Handler异步消息处理机制/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/30/Android笔记之Handler异步消息处理机制/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
